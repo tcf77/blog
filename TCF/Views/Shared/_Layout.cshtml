@@ -1,0 +1,43 @@
+﻿@using System.Web.Optimization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - TCF</title>
+    @Styles.Render("~/styles")
+</head>
+<body>
+    <div class="site-header">
+        <header class="container">
+            <small class="pull-right">@Html.DisplayName(string.Format("{0:t} -- {0:MM/dd/yy}", DateTime.Now))</small>
+            <h1 class="page-header pull-left">
+                <a href="@Url.RouteUrl("Home")">Comp Sci Blogs</a>
+                <small>- all sort of stuffs, from simple sorting to greedy algorithms</small>
+            </h1>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                @RenderBody()
+            </div>
+            <div class="col-lg-4 sidebar">
+                @Html.Action("SideBar","Layout")
+            </div>
+        </div>
+
+        <footer>
+            &copy; @DateTime.UtcNow.Year - last update: @(DateTime.Now.AddDays(-1).ToString("MMM dd, yyyy"))
+        </footer>
+    </div>
+
+    @Scripts.Render("~/scripts")
+    @RenderSection("Scripts", false)
+</body>
+</html>
