@@ -26,6 +26,11 @@ namespace TCF
             routes.MapRoute("Home", "", new { controller = "Posts", action = "Index" }, namespaces);
 
             routes.MapRoute("Sidebar", "", new { Controller = "Layout", Action = "Sidebar" }, namespaces);
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }
