@@ -161,7 +161,7 @@
     <Content Include="Scripts\ckeditor\README.md" />
     <Content Include="Scripts\ckeditor\skins\moono\readme.md" />
     <None Include="Properties\PublishProfiles\arvixe.pubxml" />
-    <None Include="Properties\PublishProfiles\arvixe_test.pubxml" />
+    <None Include="Properties\PublishProfiles\tcfArvixe.pubxml" />
     <None Include="Properties\PublishProfiles\tcf77.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -507,6 +507,7 @@
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\RefactorController.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="DbConnection.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
